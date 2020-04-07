@@ -1,0 +1,23 @@
+.chartLayout {
+    background-color: #FFFFFF;
+    width: 300px;
+    padding: 30px;
+    height: 200px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(241, 226, 226, 0.75);
+}
+
+.chartLayout h1 {
+    color: #1CC7C1;
+    font-size: 25px;
+}
+
+#appointmentBtn {
+    background-color: #11D0E0;
+    color: white;
+    padding: 10px;   
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
