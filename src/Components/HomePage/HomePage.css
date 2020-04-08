@@ -1,0 +1,34 @@
+.homePage {
+    height: 650px;
+    
+    background-image: url('../../images/Mask\ Group\ 2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+      
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);    
+    justify-items: center;
+    align-items: center;
+    margin-top: 100px;
+    
+   
+}
+.left button {
+    padding: 10px;
+    background-color: #00bdaa;
+    color: white;
+    border: 1px solid white
+}
+
+.left button a {
+    text-decoration: none;
+    color: black;
+}
+.right img {
+    width: 500px;
+    height: 350px;
+}

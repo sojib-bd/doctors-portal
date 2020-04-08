@@ -1,7 +1,7 @@
 import React from 'react';
 import Calender from './Calender/Calender';
 
-const Appointment = () => {
+const GetAppointment = () => {
     return (
         <div>
             <h1>Appointment Home page</h1>
@@ -11,4 +11,4 @@ const Appointment = () => {
     );
 };
 
-export default Appointment;
+export default GetAppointment;

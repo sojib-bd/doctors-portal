@@ -5,7 +5,7 @@ import './AppointmentChart.css';
 
 
 const AppointmentChart = (props) => {
-    console.log(props.currentDate.getDate())
+
     return (
         <div>
             <h1>AppointmentChart is here</h1>
