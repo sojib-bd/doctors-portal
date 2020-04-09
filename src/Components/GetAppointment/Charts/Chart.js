@@ -50,9 +50,14 @@ const Chart = (props) => {
 
         })
             .then(res => res.json())
-            .then(data => console.log('post successful', data));
+            .then(data => {
+                const greeting = document.getElementById('submissionText');
+                if (data) {
+                    greeting.innerText = "Your appointment has been submitted "
+                }
+            });
 
-        console.log(e.cancelable)
+
 
         e.preventDefault();
     }
@@ -78,6 +83,7 @@ const Chart = (props) => {
                         <DialogActions>
                             <button type="submit" style={{ width: 100, padding: 5, background: "#1CC7C1", color: 'white' }}>Send</button>
                         </DialogActions>
+                        <p style={{ color: 'green' }} id="submissionText"><small></small></p>
                     </form>
                     <button onClick={handleClose}>Close</button>
 

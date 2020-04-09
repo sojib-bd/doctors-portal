@@ -1,0 +1,12 @@
+.calendarContainer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-image: url('../../../images/Mask\ Group\ 2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 100px;
+    height: 400px;
+    margin-left: 50px;
+}
+

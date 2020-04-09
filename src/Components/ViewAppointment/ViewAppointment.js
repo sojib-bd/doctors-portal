@@ -3,9 +3,12 @@ import Calendar from 'react-calendar';
 import { useState } from 'react';
 import './ViewAppointment.css';
 import { useEffect } from 'react';
+import NavigationBar from '../HomePage/NavigationBar/NavigationBar';
+import AppointmentTable from '../ViewAppointment/ViewAppointmentTable/ViewAppointmentTable';
 
 const ViewAppointment = () => {
     const [date, setDate] = useState(new Date());
+    const [currentData, setCurrentData] = useState([])
     const onChange = (date) => {
         setDate(date)
     }
@@ -16,61 +19,20 @@ const ViewAppointment = () => {
         fetch('http://localhost:4200/viewAppointment')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                console.log(date);
-                //formatting the date 
-                const dd = date.getDate();
-                const mm = date.getMonth();
-                const yy = date.getFullYear();
-
-                const fullDate = `${dd}/${mm}/${yy}`;
-                console.log(fullDate)
-
-                const newData = data.filter(x => x.date === fullDate);
-                console.log(newData)
-                //Clearing the data if render
-                document.getElementById('nameList').innerHTML = "";
-                document.getElementById('timeList').innerHTML = "";
-                document.getElementById('btnList').innerHTML = " "
-                newData.map(el => {
-                    const list = document.getElementById('nameList');
-                    const item = document.createElement('li');
-                    item.innerText = el.name;
-                    list.appendChild(item);
-                    //Time list
-                    const timeList = document.getElementById('timeList');
-                    const timeItem = document.createElement('li');
-                    timeItem.innerText = el.schedule;
-                    timeList.appendChild(timeItem)
-                    // btn list 
-                    const btnList = document.getElementById('btnList');
-                    const btnItem = document.createElement('li');
-                    btnItem.innerText = 'view';
-                    btnList.appendChild(btnItem);
-
-
-                })
+                setCurrentData(data)
             })
-    }, [date])
-
-
-
+    }, [])
 
     return (
-        <div className="container">
+        <div>
+            <NavigationBar />
+            <div className="container">
 
-            <Calendar onChange={onChange} value={date} />
-            <div className="listContainer">
-                <ul id="nameList">
-                    <li>Name</li>
-                </ul>
-                <ul id="timeList">
-                    <li>Time</li>
+                <Calendar onChange={onChange} value={date} />
+                <div className="listContainer">
+                    <AppointmentTable dataInfo={currentData} dateTime={date} />
 
-                </ul>
-                <ul id="btnList">
-                    <li></li>
-                </ul>
+                </div>
             </div>
         </div>
     );

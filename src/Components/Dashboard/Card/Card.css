@@ -1,0 +1,17 @@
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 200px;   
+    border-radius: 10px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   margin-left: 100px;
+   
+   
+}
+
+.cardContainer h1 {
+    font-size: 50px;
+}

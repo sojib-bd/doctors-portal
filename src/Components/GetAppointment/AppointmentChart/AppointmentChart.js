@@ -8,7 +8,7 @@ const AppointmentChart = (props) => {
 
     return (
         <div>
-            <h1>AppointmentChart is here</h1>
+
 
             <div className="chartContainer">
                 <Chart

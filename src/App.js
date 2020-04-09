@@ -12,13 +12,13 @@ import GetAppointment from './Components/GetAppointment/GetAppointment';
 import ViewAppointment from './Components/ViewAppointment/ViewAppointment';
 import Dashboard from './Components/Dashboard/Dashboard';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
-
+console.log('App.js')
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
-      {/* <Router>
+
+      <Router>
         <Switch>
           <Route path="/getAppointment">
             <GetAppointment />
@@ -29,6 +29,9 @@ function App() {
           <Route path="/dashboard">
             <Dashboard />
           </Route>
+          <Route exact path="/home">
+            <HomePage />
+          </Route>
           <Route exact path="/">
             <HomePage />
           </Route>
@@ -36,7 +39,7 @@ function App() {
             <ErrorPage />
           </Route>
         </Switch>
-      </Router> */}
+      </Router>
 
     </div>
   );
