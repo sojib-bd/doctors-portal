@@ -41,7 +41,7 @@ const Chart = (props) => {
 
         }
         console.log(name, email)
-        fetch('http://localhost:4200/appointment', {
+        fetch('https://secret-badlands-76816.herokuapp.com/appointment', {
             method: 'POST',
             body: JSON.stringify(appointment),
             headers: {

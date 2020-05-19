@@ -16,7 +16,7 @@ const ViewAppointment = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:4200/viewAppointment')
+        fetch('https://secret-badlands-76816.herokuapp.com/viewAppointment')
             .then(res => res.json())
             .then(data => {
                 setCurrentData(data)
